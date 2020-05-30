@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useRef} from 'react';
+import CanvasDraw from 'react-canvas-draw';
 
 function App() {
+
+  const signature = useRef(null);
+  const handleClick = () =>{
+    const data = signature.current.getSaveData();
+    //data debe ser guardada en BD
+    
+  }
+
+  const clear = ()=>{
+    signature.current.clear();
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <button onClick={handleClick}>Save</button>
+      <button onClick={clear}>Clear</button>
+      <CanvasDraw brushRadius={.3} ref={signature}/>
     </div>
   );
 }
