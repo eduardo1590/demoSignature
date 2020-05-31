@@ -1,6 +1,7 @@
 import React, {useRef} from 'react';
 import CanvasDraw from 'react-canvas-draw';
 import firebase from './firebase';
+import { Button, Container, Row, Col } from 'react-bootstrap';
 
 function App() {
   const [signatures, setSignatures] = React.useState([]);
@@ -32,10 +33,13 @@ function App() {
   }
 
   return (
-    <div>
-      <CanvasDraw brushRadius={.3} ref={signature}/>
-      <button onClick={handleClick}>Save</button>
-      <button onClick={clear}>Delete</button>
+    <div> 
+      <CanvasDraw brushRadius={.3} ref={signature} canvasHeight={550}/> 
+      <Row className="justify-content-xs-center">
+        <Col xs={3} md={1}><Button variant="danger" onClick={clear}>Delete</Button></Col>
+        <Col xs={3} md={1}><Button variant="success" onClick={handleClick}>Save</Button></Col>
+      </Row>
+     
     </div>
   );
 }
