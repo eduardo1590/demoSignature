@@ -30,7 +30,12 @@ function App() {
   }
 
   const login = async ()=>{ 
-    await firebase.auth().signInWithEmailAndPassword(email, password);
+    try{
+      await firebase.auth().signInWithEmailAndPassword(email, password);
+    } catch (err){
+      alert("Datos Invalidos");
+    }
+    
   }
 
   const register = async ()=>{ 
@@ -79,6 +84,7 @@ function App() {
         <Row className="justify-content-xs-center">
           <Col xs={3} md={1}><Button variant="danger" size="lg" onClick={clear}>Delete</Button></Col>
           <Col xs={3} md={1}><Button variant="success" size="lg" onClick={handleClick}>Save</Button></Col>
+          <Col xs={3} md={1}><Button variant="warning" size="lg" onClick={logout}>Logout</Button></Col>
         </Row>
         </>
       }
