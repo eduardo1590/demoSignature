@@ -79,7 +79,6 @@ function App() {
         <Row className="justify-content-xs-center">
           <Col xs={3} md={1}><Button variant="danger" size="lg" onClick={clear}>Delete</Button></Col>
           <Col xs={3} md={1}><Button variant="success" size="lg" onClick={handleClick}>Save</Button></Col>
-          <Col xs={3} md={1}><Button variant="danger" size="lg" onClick={logout}>Logout</Button></Col>
         </Row>
         </>
       }
