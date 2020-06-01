@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +67,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+=======
+# demoSignature
+Aplicacion para dibujar con Canvas. Permite crear usuarios, inicio de sesion, guarda los trazos en Base de Datos. Creada en React con Firebase como Backend
+>>>>>>> d53fa35f2fa5815b5a158697c5cf3685a5340c38

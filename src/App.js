@@ -21,7 +21,7 @@ function App() {
 
   const addSign = (data)=>{
     const date = new Date();
-    firebase.firestore().collection('signatures').add({signature: data, date: date, user: user.email});
+    firebase.firestore().collection(`${user.email}-signatures`).add({signature: data, date: date, user: user.email});
     clear();
   }
 
